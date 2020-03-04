@@ -116,42 +116,47 @@ Map products = {
     {
       "title": "B0001",
       "subtitle": "P&L Men's 2-Piece Classic",
-      "image": "assets/2.png",
+      "image": "assets/p1.png",
     },
     {
       "title": "B0002",
       "subtitle": "P&L Men's 2-Piece Classic",
-      "image": "assets/a2.png",
+      "image": "assets/p2.png",
     },
     {
       "title": "B0003",
       "subtitle": "P&L Men's 2-Piece Classic",
-      "image": "assets/a4.png",
+      "image": "assets/p3.png",
     },
     {
       "title": "B0004",
       "subtitle": "P&L Men's 2-Piece Classic",
-      "image": "assets/5.png",
+      "image": "assets/p4.png",
     },
     {
       "title": "B0005",
       "subtitle": "P&L Men's 2-Piece Classic",
-      "image": "assets/a5.png",
+      "image": "assets/p5-1.png",
     },
     {
       "title": "B0006",
       "subtitle": "P&L Men's 2-Piece Classic",
-      "image": "assets/7.png",
+      "image": "assets/p6.png",
     },
     {
       "title": "B0007",
       "subtitle": "P&L Men's 2-Piece Classic",
-      "image": "assets/8.png",
+      "image": "assets/p7.png",
     },
     {
       "title": "B0008",
       "subtitle": "P&L Men's 2-Piece Classic",
-      "image": "assets/9.png",
+      "image": "assets/p8.png",
+    },
+    {
+      "title": "B0008",
+      "subtitle": "P&L Men's 2-Piece Classic",
+      "image": "assets/p9.png",
     },
   ],
   "DANSHIKI": [

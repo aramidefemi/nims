@@ -8,6 +8,7 @@ import 'package:nims/screens/auth/register_screen.dart';
 import 'package:nims/screens/measurements/user_measurement_screen.dart';
 import 'package:nims/screens/measurements/user_measurement_screen_outfit.dart';
 import 'package:nims/screens/products/products_screen.dart';
+import 'package:nims/screens/profile/profilescreen.dart';
 import 'package:redux_persist_flutter/redux_persist_flutter.dart';
 
 import 'package:nims/presentation/platform_adaptive.dart';
@@ -55,6 +56,7 @@ class ReduxApp extends StatelessWidget {
                 '/fpw': (BuildContext context) => new FPWScreen(),
                 '/user-measurement': (BuildContext context) => new UserMeasurementScreen(),
                 '/user-measurement-outfit': (BuildContext context) => new UserMeasurementOutfitScreen(),
+                '/profile-screen': (BuildContext context) => new ProfileScreen(),
               })),
     );
   }
