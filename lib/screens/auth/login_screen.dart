@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nims/containers/auth/login_form.dart';
- 
-import 'package:nims/styles/colors.dart';
 
 class LoginScreen extends StatelessWidget {
     LoginScreen({Key key}) : super(key: key);

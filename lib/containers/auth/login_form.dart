@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:nims/containers/auth/widget/input.dart';
 import 'package:nims/containers/button.dart';
-import 'package:nims/styles/colors.dart';
 import 'package:redux/redux.dart';
-
-import 'package:nims/presentation/platform_adaptive.dart';
 import 'package:nims/models/app_state.dart';
 import 'package:nims/actions/auth_actions.dart';
 

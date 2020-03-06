@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nims/containers/auth/fpw_form.dart';
 
-import 'package:nims/styles/colors.dart';
-
 class FPWScreen extends StatelessWidget {
   FPWScreen({Key key}) : super(key: key);
 

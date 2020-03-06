@@ -5,8 +5,11 @@ import 'package:nims/screens/auth/auth_screen.dart';
 import 'package:nims/screens/auth/details_screen.dart';
 import 'package:nims/screens/auth/fpw_screen.dart';
 import 'package:nims/screens/auth/register_screen.dart';
+import 'package:nims/screens/favourites/favouritescreen.dart';
+import 'package:nims/screens/history/history.dart';
 import 'package:nims/screens/measurements/user_measurement_screen.dart';
 import 'package:nims/screens/measurements/user_measurement_screen_outfit.dart';
+import 'package:nims/screens/orders/trackorders.dart';
 import 'package:nims/screens/products/products_screen.dart';
 import 'package:nims/screens/profile/profilescreen.dart';
 import 'package:redux_persist_flutter/redux_persist_flutter.dart';
@@ -57,6 +60,9 @@ class ReduxApp extends StatelessWidget {
                 '/user-measurement': (BuildContext context) => new UserMeasurementScreen(),
                 '/user-measurement-outfit': (BuildContext context) => new UserMeasurementOutfitScreen(),
                 '/profile-screen': (BuildContext context) => new ProfileScreen(),
+                '/track-orders': (BuildContext context) => new TrackOrders(),
+                '/favourite-screen': (BuildContext context) => new FavouriteScreen(),
+                '/history-screen': (BuildContext context) => new HistoryScreen(),
               })),
     );
   }

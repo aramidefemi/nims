@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nims/containers/auth/details_form.dart';
- 
-import 'package:nims/styles/colors.dart';
 
 class DetailsScreen extends StatelessWidget {
     DetailsScreen({Key key}) : super(key: key);

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nims/styles/colors.dart';
-import 'package:nims/styles/texts.dart';
 
 Widget appWell({label,width}) {
   return new Container( 

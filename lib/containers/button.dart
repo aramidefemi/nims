@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nims/presentation/platform_adaptive.dart';
 import 'package:nims/styles/colors.dart';
 
 Widget appbutton({ @required String label, @required Function action, double padding = 12.0 }) {

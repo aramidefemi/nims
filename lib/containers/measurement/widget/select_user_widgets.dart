@@ -1,8 +1,6 @@
 import 'package:dropdownfield/dropdownfield.dart';
 import 'package:flutter/material.dart';
 import 'package:nims/containers/button_alt.dart';
-import 'package:nims/containers/input.dart';
-import 'package:nims/containers/products/model/products.dart';
 import 'package:nims/styles/colors.dart';
 
 List<String> cities = [

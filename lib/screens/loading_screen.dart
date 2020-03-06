@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:nims/styles/colors.dart';
-
 class LoadingScreen extends StatelessWidget {
     
     LoadingScreen({Key key}): super(key: key);

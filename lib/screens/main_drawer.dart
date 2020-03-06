@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:nims/screens/profile/profilescreen.dart';
 
 import 'package:nims/styles/colors.dart';
 import 'package:nims/actions/auth_actions.dart';
@@ -39,15 +38,21 @@ class MainDrawer extends StatelessWidget {
                 new ListTile(
                     leading: new Icon(Icons.info),
                     title: new Text('Track Orders'),
-                    onTap: () => print('you pressed track orders')),
+                    onTap: () {
+                      Navigator.pushNamed(context, '/track-orders');
+                    }),
                 new ListTile(
                     leading: new Icon(Icons.favorite),
                     title: new Text('Favourite'),
-                    onTap: () => print('you pressed favourite')),
+                    onTap: () {
+                      Navigator.pushNamed(context, '/favourite-screen');
+                    }),
                 new ListTile(
                     leading: new Icon(Icons.favorite),
                     title: new Text('History'),
-                    onTap: () => print('you pressed history')),
+                    onTap: () {
+                      Navigator.pushNamed(context, '/history-screen');
+                    }),
                 new Divider(
                   color: colorStyles['text_blue'],
                 ),

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nims/containers/button.dart';
 
-import 'package:nims/styles/colors.dart';
-
 class AuthScreen extends StatelessWidget {
   AuthScreen({Key key}) : super(key: key);
 

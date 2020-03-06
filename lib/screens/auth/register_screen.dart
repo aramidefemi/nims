@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nims/containers/auth/register_form.dart';
- 
-import 'package:nims/styles/colors.dart';
 
 class RegisterScreen extends StatelessWidget {
     RegisterScreen({Key key}) : super(key: key);

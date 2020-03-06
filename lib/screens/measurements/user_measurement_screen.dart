@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nims/containers/auth/fpw_form.dart';
 import 'package:nims/containers/measurement/select_user_form.dart';
-
-import 'package:nims/styles/colors.dart';
 
 class UserMeasurementScreen extends StatelessWidget {
   UserMeasurementScreen({Key key}) : super(key: key);
