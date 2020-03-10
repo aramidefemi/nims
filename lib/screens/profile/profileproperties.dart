@@ -24,39 +24,27 @@ class _ProfilePropertiesState extends State<ProfileProperties> {
           return Container(
             child: ListView(
               children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    Row(
-                      children: <Widget>[
-                        Column(
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 40.0
+                  ),
+                  child: new Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          mainAxisSize: MainAxisSize.min,
+                          
                           children: <Widget>[
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              mainAxisSize: MainAxisSize.min,
-                              children: <Widget>[
-                                Text(
+                            Text(
                                   'Profile',
                                   style: TextStyle(
                                     fontSize: 18.0,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                              ],
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              mainAxisSize: MainAxisSize.min,
-                              children: <Widget>[
-                                _status ? _getEditIcon() : new Container(),
-                              ],
-                            ),
+                               _status ? _getEditIcon() : new Container(),
                           ],
                         ),
-                      ],
-                    ),
-                  ],
+                      
+                  
                 ),
                 Padding(
                   padding: const EdgeInsets.all(40.0),
