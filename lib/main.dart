@@ -21,6 +21,8 @@ import 'package:nims/store/store.dart';
 import 'package:nims/middleware/middleware.dart';
 import 'package:nims/models/app_state.dart';
 
+import 'screens/categories/categories.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(new ReduxApp());
@@ -63,6 +65,7 @@ class ReduxApp extends StatelessWidget {
                 '/track-orders': (BuildContext context) => new TrackOrders(),
                 '/favourite-screen': (BuildContext context) => new FavouriteScreen(),
                 '/history-screen': (BuildContext context) => new HistoryScreen(),
+                '/category-screen': (BuildContext context) => new CategoryScreen(),
               })),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nims/containers/auth/fpw_form.dart';
+import 'package:nims/containers/well.dart';
+import 'package:nims/styles/colors.dart';
 
 class ProfileProperties extends StatefulWidget {
   @override
@@ -7,220 +8,197 @@ class ProfileProperties extends StatefulWidget {
 }
 
 class _ProfilePropertiesState extends State<ProfileProperties> {
+  bool _status = true;
+  final FocusNode myFocusNode = FocusNode();
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<Object>(
-      stream: null,
-      builder: (context, snapshot) {
-        return Container(
-          child: ListView(
-            children: <Widget>[
-              Column(
-                children: <Widget>[
-                  Column(
+        stream: null,
+        builder: (context, snapshot) {
+          return Container(
+            child: ListView(
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Row(
+                      children: <Widget>[
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                Text(
+                                  'Profile',
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                _status ? _getEditIcon() : new Container(),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(40.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.max,
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.only(right: 250),
-                        child: Text(
-                          'PROFILE',
-                          style:
-                              TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    children: [
+                      Text(
+                        'Company Name',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.w600,
+                          color: colorStyles['text_blue'],
                         ),
                       ),
-                      // Padding(
-                      //   padding: EdgeInsets.only(right: 220, top: 15),
-                      //   child: Text(
-                      //     'Company Name',
-                      //     style: TextStyle(
-                      //       fontSize: 13,
-                      //       color: Color(0xffE47B1B),
-                      //       fontWeight: FontWeight.bold,
-                      //     ),
-                      //   ),
-                      // ),
-                      // Padding(
-                      //   padding: const EdgeInsets.only(top: 8.0),
-                      //   child: TextFormField(
-                      //     decoration: new InputDecoration(
-                      //       hintText: 'Nims Craft',
-                      //       contentPadding: EdgeInsets.symmetric(
-                      //         horizontal: 10,
-                      //         vertical: 3
-                      //       ),
-                      //       fillColor: Colors.grey.shade200,
-                      //       filled: true,
-                      //       border: UnderlineInputBorder(
-                      //         borderRadius: BorderRadius.circular(6.0),
-                      //         borderSide: BorderSide(
-                      //           style: BorderStyle.solid,
-                      //           color: Colors.grey.shade200
-                      //         )
-                      //       )
-                      //     ),
-                      //     style: TextStyle(
-                      //       color: colorStyles['text_blue'],
-                      //       fontSize: 18,
-                      //     ),
-                      //   ),
-                      // ),
-                      // Padding(
-                      //   padding: EdgeInsets.only(right: 280, top: 15),
-                      //   child: Text(
-                      //     'Email',
-                      //     style: TextStyle(
-                      //       fontSize: 13,
-                      //       color: Color(0xffE47B1B),
-                      //       fontWeight: FontWeight.bold,
-                      //     ),
-                      //   ),
-                      // ),
-                      // Padding(
-                      //   padding: const EdgeInsets.only(top: 8.0),
-                      //   child: TextFormField(
-                      //     decoration: new InputDecoration(
-                      //       hintText: 'test@test.com',
-                      //       contentPadding: EdgeInsets.symmetric(
-                      //         horizontal: 10,
-                      //         vertical: 3
-                      //       ),
-                      //       fillColor: Colors.grey.shade200,
-                      //       filled: true,
-                      //       border: UnderlineInputBorder(
-                      //         borderRadius: BorderRadius.circular(6.0),
-                      //         borderSide: BorderSide(
-                      //           style: BorderStyle.solid,
-                      //           color: Colors.grey.shade200
-                      //         )
-                      //       )
-                      //     ),
-                      //     style: TextStyle(
-                      //       color: colorStyles['text_blue'],
-                      //       fontSize: 18,
-                      //     ),
-                      //   ),
-                      // ),
-                      // Padding(
-                      //   padding: EdgeInsets.only(right: 220, top: 15),
-                      //   child: Text(
-                      //     'Office Address',
-                      //     style: TextStyle(
-                      //       fontSize: 13,
-                      //       color: Color(0xffE47B1B),
-                      //       fontWeight: FontWeight.bold,
-                      //     ),
-                      //   ),
-                      // ),
-                      // Padding(
-                      //   padding: const EdgeInsets.only(top: 8.0),
-                      //   child: TextFormField(
-                      //     decoration: new InputDecoration(
-                      //       hintText: 'Lekki Phase 1',
-                      //       contentPadding: EdgeInsets.symmetric(
-                      //         horizontal: 10,
-                      //         vertical: 3
-                      //       ),
-                      //       fillColor: Colors.grey.shade200,
-                      //       filled: true,
-                      //       border: UnderlineInputBorder(
-                      //         borderRadius: BorderRadius.circular(6.0),
-                      //         borderSide: BorderSide(
-                      //           style: BorderStyle.solid,
-                      //           color: Colors.grey.shade200
-                      //         )
-                      //       )
-                      //     ),
-                      //     style: TextStyle(
-                      //       color: colorStyles['text_blue'],
-                      //       fontSize: 18,
-                      //     ),
-                      //   ),
-                      // ),
-                      // Padding(
-                      //   padding: EdgeInsets.only(right: 220, top: 15),
-                      //   child: Text(
-                      //     'Phone Number',
-                      //     style: TextStyle(
-                      //       fontSize: 13,
-                      //       color: Color(0xffE47B1B),
-                      //       fontWeight: FontWeight.bold,
-                      //     ),
-                      //   ),
-                      // ),
-                      // Padding(
-                      //   padding: const EdgeInsets.only(top: 8.0),
-                      //   child: TextFormField(
-                      //     decoration: new InputDecoration(
-                      //       hintText: '+(234) ___ ___ ____',
-                      //       contentPadding: EdgeInsets.symmetric(
-                      //         horizontal: 10,
-                      //         vertical: 3
-                      //       ),
-                      //       fillColor: Colors.grey.shade200,
-                      //       filled: true,
-                      //       border: UnderlineInputBorder(
-                      //         borderRadius: BorderRadius.circular(6.0),
-                      //         borderSide: BorderSide(
-                      //           style: BorderStyle.solid,
-                      //           color: Colors.grey.shade200
-                      //         )
-                      //       )
-                      //     ),
-                      //     style: TextStyle(
-                      //       color: colorStyles['text_blue'],
-                      //       fontSize: 18,
-                      //     ),
-                      //   ),
-                      // ),
-                      // Padding(
-                      //   padding: EdgeInsets.only(right: 270, top: 15),
-                      //   child: Text(
-                      //     'Debt',
-                      //     style: TextStyle(
-                      //       fontSize: 13,
-                      //       color: Color(0xffE47B1B),
-                      //       fontWeight: FontWeight.bold,
-                      //     ),
-                      //   ),
-                      // ),
-                      // Padding(
-                      //   padding: const EdgeInsets.only(top: 8.0),
-                      //   child: TextFormField(
-                      //     decoration: new InputDecoration(
-                      //       hintText: 'N10,000',
-                      //       contentPadding: EdgeInsets.symmetric(
-                      //         horizontal: 10,
-                      //         vertical: 3
-                      //       ),
-                      //       fillColor: Colors.grey.shade200,
-                      //       filled: true,
-                      //       border: UnderlineInputBorder(
-                      //         borderRadius: BorderRadius.circular(6.0),
-                      //         borderSide: BorderSide(
-                      //           style: BorderStyle.solid,
-                      //           color: Colors.grey.shade200
-                      //         )
-                      //       )
-                      //     ),
-                      //     style: TextStyle(
-                      //       color: colorStyles['text_blue'],
-                      //       fontSize: 18,
-                      //     ),
-                      //   ),
-                      // ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 15),
-                        child: FPWForm()
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      appWell(
+                          label: 'NIMS CRAFT',
+                          width: MediaQuery.of(context).size.width),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      Text(
+                        'Email',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.w600,
+                          color: colorStyles['text_blue'],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      appWell(
+                          label: 'nimscraft@gmail.com',
+                          width: MediaQuery.of(context).size.width),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      Text(
+                        'Office Address',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.w600,
+                          color: colorStyles['text_blue'],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      appWell(
+                          label: 'Lekki Phase 1',
+                          width: MediaQuery.of(context).size.width),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      Text(
+                        'Phone Number',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.w600,
+                          color: colorStyles['text_blue'],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      appWell(
+                          label: '+(234) 123 456 8901',
+                          width: MediaQuery.of(context).size.width),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      Text(
+                        'Debut',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.w600,
+                          color: colorStyles['text_blue'],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      appWell(
+                          label: '#10,000',
+                          width: MediaQuery.of(context).size.width),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      FlatButton(
+                        color: colorStyles['text_blue'],
+                        shape: new RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(6.0)),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/user-measurement');
+                        },
+                        child: Container(
+                          padding:
+                              EdgeInsets.symmetric(vertical: 20, horizontal: 5),
+                          child: Center(
+                            child: new Text(
+                              'Continue',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
                     ],
-                  )
-                ],
-              )
-            ],
-          ),
-        );
-      }
+                  ),
+                ),
+              ],
+            ),
+          );
+        });
+  }
+
+  Widget _getEditIcon() {
+    return new GestureDetector(
+      child: new CircleAvatar(
+        backgroundColor: Colors.red,
+        radius: 14.0,
+        child: new Icon(
+          Icons.edit,
+          color: Colors.white,
+          size: 16.0,
+        ),
+      ),
+      onTap: () {
+        setState(() {
+          _status = false;
+        });
+      },
     );
   }
 }

@@ -35,12 +35,14 @@ class HistoryProperties extends StatelessWidget {
                         fontWeight: FontWeight.normal,
                       ),
                     ),
-                  ])),
+                  ]
+                )
+              ),
             ],
           ),
           SizedBox(height: 8.0),
           Divider(
-            color: Colors.blue[200],
+            color: Color(0xff030339),
             height: 5.0,
             thickness: 1,
           ),
@@ -66,11 +68,13 @@ class HistoryProperties extends StatelessWidget {
                       fontWeight: FontWeight.normal,
                     ),
                   ),
-                ])),
+                ]
+              )
+            ),
           ),
           SizedBox(height: 8.0),
           Divider(
-            color: Colors.blue[200],
+            color: Color(0xff030339),
             height: 5.0,
             thickness: 1,
           ),
@@ -96,11 +100,13 @@ class HistoryProperties extends StatelessWidget {
                       fontWeight: FontWeight.normal,
                     ),
                   ),
-                ])),
+                ],
+              )
+            ),
           ),
           SizedBox(height: 8.0),
           Divider(
-            color: Colors.blue[200],
+            color: Color(0xff030339),
             height: 5.0,
             thickness: 1,
           ),

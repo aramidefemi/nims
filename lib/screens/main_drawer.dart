@@ -48,14 +48,17 @@ class MainDrawer extends StatelessWidget {
                       Navigator.pushNamed(context, '/favourite-screen');
                     }),
                 new ListTile(
-                    leading: new Icon(Icons.favorite),
+                    leading: new Icon(Icons.history),
                     title: new Text('History'),
                     onTap: () {
                       Navigator.pushNamed(context, '/history-screen');
                     }),
-                new Divider(
-                  color: colorStyles['text_blue'],
-                ),
+                    new ListTile(
+                    leading: new Icon(Icons.category),
+                    title: new Text('Categories'),
+                    onTap: () {
+                      Navigator.pushNamed(context, '/category-screen');
+                    }),
                 new ListTile(
                     leading: new Icon(Icons.exit_to_app),
                     title: new Text('Sign Out'),

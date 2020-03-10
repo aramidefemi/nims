@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nims/screens/history/historyproperties.dart';
+import 'categoriesproperties.dart';
 
-class HistoryScreen extends StatelessWidget {
-  HistoryScreen({Key key}) : super(key: key);
+class CategoryScreen extends StatelessWidget {
+  CategoryScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,34 +14,31 @@ class HistoryScreen extends StatelessWidget {
               colorFilter: new ColorFilter.mode(
                   Colors.black.withOpacity(.5), BlendMode.darken),
               fit: BoxFit.fitWidth,
-              image: AssetImage('assets/reels-colored-threads.png'),
-              alignment: Alignment(0, -4)),
+              image: AssetImage('assets/2@2x.png'),
+              alignment: Alignment(0, 1)),
         ),
         child: new Column(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text(
-                'HISTORY',
+                'CATEGORY',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600  ),
               ),
               SizedBox(
-                height: 150.0,
+                height: 100.0,
               ),
               new Container(
                 height: MediaQuery.of(context).size.height * .56,
                 decoration: new BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
-                      topLeft: const Radius.circular(40.0),
-                      topRight: const Radius.circular(40.0)
-                    )
-                  ),
-                  child: new HistoryProperties(),
+                        topLeft: const Radius.circular(40.0),
+                        topRight: const Radius.circular(40.0))),
+                child: new CategoryProperties(),
               )
-            ]
-          ),
+            ]),
       ),
     );
   }
