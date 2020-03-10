@@ -20,8 +20,8 @@ class MainDrawer extends StatelessWidget {
                 new Container(
                   height: 200.0,
                   child: new UserAccountsDrawerHeader(
-                    accountEmail: Text('Text@gmail.com'),
-                    accountName: Text('NIMS'),
+                    accountEmail: Text('avatar@avatar.com', style: TextStyle(color: Colors.white),),
+                    accountName: Text('avatar', style: TextStyle(color: Colors.white),),
                     decoration: BoxDecoration(
                       color: colorStyles['text_blue'],
                     ),
