@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nims/containers/auth/details_form.dart';
 import 'package:nims/containers/well.dart';
 import 'package:nims/styles/colors.dart';
 
@@ -31,7 +32,6 @@ class _ProfilePropertiesState extends State<ProfileProperties> {
                   child: new Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          
                           children: <Widget>[
                             Text(
                                   'Profile',
@@ -43,9 +43,11 @@ class _ProfilePropertiesState extends State<ProfileProperties> {
                                _status ? _getEditIcon() : new Container(),
                           ],
                         ),
-                      
-                  
                 ),
+                // Padding(
+                //   padding: const EdgeInsets.all(10.0),
+                //   child: DetailsForm(),
+                // )
                 Padding(
                   padding: const EdgeInsets.all(40.0),
                   child: Column(
@@ -154,7 +156,7 @@ class _ProfilePropertiesState extends State<ProfileProperties> {
                               EdgeInsets.symmetric(vertical: 20, horizontal: 5),
                           child: Center(
                             child: new Text(
-                              'Continue',
+                              'SAVE DETAILS',
                               style: TextStyle(
                                 color: Colors.white,
                               ),

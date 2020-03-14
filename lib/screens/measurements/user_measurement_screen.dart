@@ -15,7 +15,7 @@ class UserMeasurementScreen extends StatelessWidget {
                   Colors.black.withOpacity(.5), BlendMode.darken),
               fit: BoxFit.fitWidth,
               image: AssetImage('assets/sewing-meterbg.png'),
-              alignment: Alignment(0, -2.2)),
+              alignment: Alignment(0, -3.2)),
         ),
         child: new Column(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -23,9 +23,11 @@ class UserMeasurementScreen extends StatelessWidget {
             children: <Widget>[
               Text(
                 'MEASUREMENT',
-                
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600  ),
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600),
               ),
               SizedBox(
                 height: 150.0,

@@ -24,7 +24,7 @@ class CategoryScreen extends StatelessWidget {
               Text(
                 'CATEGORY',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600  ),
+                style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600),
               ),
               SizedBox(
                 height: 100.0,

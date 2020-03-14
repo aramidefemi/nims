@@ -12,9 +12,7 @@ class FavouriteProperties extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 6
-            ),
+            padding: EdgeInsets.symmetric(horizontal: 6),
           ),
           Expanded(
             child: TabBarView(
@@ -31,8 +29,9 @@ class FavouriteProperties extends StatelessWidget {
       ),
     );
   }
+
 // productGridItem
-  Widget productGrid (which){ 
+  Widget productGrid(which) {
     return GridView.count(
       crossAxisCount: 3,
       scrollDirection: Axis.vertical,
@@ -41,17 +40,21 @@ class FavouriteProperties extends StatelessWidget {
       }),
     );
   }
+
   Widget tabButtons({String name}) {
     return Tab(
-                  child: Container(
-                  
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text("$name",textAlign:  TextAlign.center, style: TextStyle(
-                        fontSize: 8.5,
-                      ),),
-                    ),
-                  ),
-                );
+      child: Container(
+        child: Align(
+          alignment: Alignment.center,
+          child: Text(
+            "$name",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 8.5,
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

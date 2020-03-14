@@ -61,7 +61,9 @@ Widget productGridItem(detail) {
                   ],
                 ),
               ),
-              smallBtn(action: () {}, label: 'view')
+              smallBtn(action: () {
+                
+              }, label: 'view')
             ],
           ),
         )
