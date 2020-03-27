@@ -22,6 +22,7 @@ import 'package:nims/middleware/middleware.dart';
 import 'package:nims/models/app_state.dart';
 
 import 'screens/categories/categories.dart';
+import 'screens/payment/paymentscreen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -66,6 +67,7 @@ class ReduxApp extends StatelessWidget {
                 '/favourite-screen': (BuildContext context) => new FavouriteScreen(),
                 '/history-screen': (BuildContext context) => new HistoryScreen(),
                 '/category-screen': (BuildContext context) => new CategoryScreen(),
+                '/payment-screen': (BuildContext context) => new PaymentScreen(),
               })),
     );
   }

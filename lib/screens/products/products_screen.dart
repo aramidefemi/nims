@@ -76,7 +76,7 @@ class ProductsScreen extends StatelessWidget {
   }
 }
 
-Widget appInput({label, password, @required controller}) {
+Widget appInput({label, password, @required controller, double width}) {
   return new TextFormField(
     controller: controller,
     decoration: new InputDecoration(

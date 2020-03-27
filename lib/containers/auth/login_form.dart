@@ -19,7 +19,7 @@ class _LoginFormState extends State<LoginForm> {
 
   void _submit() {
     final form = formKey.currentState;
-print('step 3');
+      print('step 3');
     if (form.validate()) {
       form.save();
     }
@@ -33,7 +33,8 @@ print('step 3');
         print('step 1 $username $password $_username');
          return store.dispatch(login(context, username, password));
       };
-    }, builder: (BuildContext context, loginAction) {
+    }, 
+    builder: (BuildContext context, loginAction) {
       return new Form(
         key: formKey,
         child: new Column(

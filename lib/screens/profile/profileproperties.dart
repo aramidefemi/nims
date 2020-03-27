@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nims/containers/auth/details_form.dart';
 import 'package:nims/containers/well.dart';
 import 'package:nims/styles/colors.dart';
 
@@ -149,14 +148,14 @@ class _ProfilePropertiesState extends State<ProfileProperties> {
                         shape: new RoundedRectangleBorder(
                             borderRadius: new BorderRadius.circular(6.0)),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/user-measurement');
+                          Navigator.pushNamed(context, '/payment-screen');
                         },
                         child: Container(
                           padding:
                               EdgeInsets.symmetric(vertical: 20, horizontal: 5),
                           child: Center(
                             child: new Text(
-                              'SAVE DETAILS',
+                              'PAY DEBT',
                               style: TextStyle(
                                 color: Colors.white,
                               ),
