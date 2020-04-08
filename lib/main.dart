@@ -10,6 +10,8 @@ import 'package:nims/screens/history/history.dart';
 import 'package:nims/screens/measurements/user_measurement_screen.dart';
 import 'package:nims/screens/measurements/user_measurement_screen_outfit.dart';
 import 'package:nims/screens/orders/trackorders.dart';
+import 'package:nims/screens/payment/carddetails.dart';
+import 'package:nims/screens/payment/creditlinecode.dart';
 import 'package:nims/screens/products/products_screen.dart';
 import 'package:nims/screens/profile/profilescreen.dart';
 import 'package:redux_persist_flutter/redux_persist_flutter.dart';
@@ -68,6 +70,8 @@ class ReduxApp extends StatelessWidget {
                 '/history-screen': (BuildContext context) => new HistoryScreen(),
                 '/category-screen': (BuildContext context) => new CategoryScreen(),
                 '/payment-screen': (BuildContext context) => new PaymentScreen(),
+                '/credit_line_code': (BuildContext context) => new CreditLineCode(),
+                '/card_details': (BuildContext context) => new CardDetails(),
               })),
     );
   }
