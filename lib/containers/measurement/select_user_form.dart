@@ -35,10 +35,7 @@ class _SelectUserFormState extends State<SelectUserForm> {
             ? theSelectUser(
               newClient: () {
                 print('new client');
-                this.setState(() {
-                  this.newClients = true;
-                  this.selectType = false;
-                });
+               Navigator.pushNamed(context, '/user-measurement-outfit');
               },
               oldClient: () {
                 print('old client');

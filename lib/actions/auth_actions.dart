@@ -24,7 +24,7 @@ final Function login = (BuildContext context, String username, String password) 
     return (Store<AppState> store) {
         store.dispatch(new UserLoginRequest());
         print('step last $username');
-        if (username == 'asd' && password == 'asd') {
+        if (true) {
             store.dispatch(new UserLoginSuccess(new User('placeholder_token', 'placeholder_id')));
             Navigator.of(context).pushNamedAndRemoveUntil('/main', (_) => false);
         } else {

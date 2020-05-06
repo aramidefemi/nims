@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:nims/containers/measurement/widget/select_user_widgets.dart';
 import 'package:nims/containers/well.dart';
+import 'package:nims/screens/style/select_style_screen.dart';
 import 'package:nims/styles/colors.dart';
 import 'package:redux/redux.dart';
 import 'package:nims/models/app_state.dart';
@@ -49,11 +50,12 @@ class _SelectUserOutfitFormState extends State<SelectUserOutfitForm> {
                 color: colorStyles['text_blue'],
               ),
             ),
-             SizedBox(
+            SizedBox(
               height: 15.0,
             ),
-            appWell(label: 'Kola Banker',width: MediaQuery.of(context).size.width),
-              SizedBox(
+            appWell(
+                label: 'Kola Banker', width: MediaQuery.of(context).size.width),
+            SizedBox(
               height: 35.0,
             ),
             Text(
@@ -84,13 +86,16 @@ class _SelectUserOutfitFormState extends State<SelectUserOutfitForm> {
               shape: new RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(6.0)),
               onPressed: () {
-                Navigator.pushNamed(context, '/user-measurement-outfit');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => UserStyleScreen()),
+                );
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 20, horizontal: 5),
                 child: Center(
                   child: new Text(
-                    'Continue',
+                    'Create',
                     style: TextStyle(
                       color: Colors.white,
                     ),

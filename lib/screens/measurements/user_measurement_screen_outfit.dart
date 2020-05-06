@@ -6,6 +6,7 @@ class UserMeasurementOutfitScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return new Scaffold(
       body: new Container(
         height: MediaQuery.of(context).size.height,
@@ -15,7 +16,7 @@ class UserMeasurementOutfitScreen extends StatelessWidget {
                   Colors.black.withOpacity(.5), BlendMode.darken),
               fit: BoxFit.fitWidth,
               image: AssetImage('assets/sewing-meterbg.png'),
-              alignment: Alignment(0, -2.2)),
+              alignment: Alignment(0, -8),)
         ),
         child: new Column(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -23,7 +24,6 @@ class UserMeasurementOutfitScreen extends StatelessWidget {
             children: <Widget>[
               Text(
                 'MEASUREMENT',
-                
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600  ),
               ),

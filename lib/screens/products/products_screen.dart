@@ -10,6 +10,10 @@ class ProductsScreen extends StatelessWidget {
   TextEditingController _search = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+ 
+
     return new Scaffold(
       body: new Container(
         // height: MediaQuery.of(context).size.height
@@ -28,7 +32,7 @@ class ProductsScreen extends StatelessWidget {
             // crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               new Positioned(
-                top: 180,
+                top: 150,
                 left: 70,
                 child: new Row(
                   children: <Widget>[
@@ -46,7 +50,7 @@ class ProductsScreen extends StatelessWidget {
               new Positioned(
                 bottom: 0,
                 child: new Container(
-                  height: MediaQuery.of(context).size.height * .72,
+                  height: height * .65,
                   width: MediaQuery.of(context).size.width,
                   decoration: new BoxDecoration(
                       color: Colors.white,
@@ -76,16 +80,21 @@ class ProductsScreen extends StatelessWidget {
   }
 }
 
-Widget appInput({label, password, @required controller, double width}) {
+Widget appInput({label, hint, password = false, @required controller, double width}) {
   return new TextFormField(
     controller: controller,
     decoration: new InputDecoration(
+      hintText: hint,
+      hintStyle: TextStyle(
+        color: Colors.grey,
+        fontSize: 12
+      ),
       border: UnderlineInputBorder(
-          borderRadius: BorderRadius.circular(0),
-          borderSide:
-              BorderSide(style: BorderStyle.none, color: Colors.grey.shade200)),
+          borderRadius: BorderRadius.circular(2),
+          borderSide: BorderSide.none
+              ),
       contentPadding: EdgeInsets.symmetric(
-        horizontal: 10,
+        horizontal: 10 
       ),
       fillColor: Colors.grey.shade200,
       filled: true,
